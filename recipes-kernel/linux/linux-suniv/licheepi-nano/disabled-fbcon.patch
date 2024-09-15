@@ -1,0 +1,16 @@
+diff --git a/drivers/video/fbdev/core/fbcon.c b/drivers/video/fbdev/core/fbcon.c
+index eb565a10e5cd..477f679a536d 100644
+--- a/drivers/video/fbdev/core/fbcon.c
++++ b/drivers/video/fbdev/core/fbcon.c
+@@ -272,10 +272,7 @@ static int fbcon_get_rotate(struct fb_info *info)
+ 
+ static inline int fbcon_is_inactive(struct vc_data *vc, struct fb_info *info)
+ {
+-	struct fbcon_ops *ops = info->fbcon_par;
+-
+-	return (info->state != FBINFO_STATE_RUNNING ||
+-		vc->vc_mode != KD_TEXT || ops->graphics);
++	return 1;
+ }
+ 
+ static int get_color(struct vc_data *vc, struct fb_info *info,

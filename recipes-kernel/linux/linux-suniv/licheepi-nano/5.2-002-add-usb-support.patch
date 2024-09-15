@@ -1,7 +1,7 @@
-diff --git a/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts
+diff --git a/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-tconlcd.dts
 index cc1a817..816ee4d 100644
---- a/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts
-+++ b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts
+--- a/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-tconlcd.dts
++++ b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-tconlcd.dts
 @@ -187,3 +187,13 @@
  	status = "okay";
  };

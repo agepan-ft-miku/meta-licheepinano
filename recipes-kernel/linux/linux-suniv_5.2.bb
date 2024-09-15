@@ -26,4 +26,17 @@ SRC_URI += "git://github.com/Lichee-Pi/linux.git;branch=nano-5.2-flash;depth=1;p
 		file://licheepi-nano/5.2-001-dts-add-nor-flash-support.patch \
 		file://licheepi-nano/5.2-002-add-usb-support.patch \
         file://licheepi-nano/defconfig \
+		file://licheepi-nano/remove-redundant-yyloc-declaration.patch \
         "
+SRC_URI += "\
+		file://licheepi-nano/append_src \
+        file://licheepi-nano/defconfig-usb/defconfig \
+		file://licheepi-nano/defconfig-usb/add-composit-gadget-support.cfg \
+		file://licheepi-nano/defconfig-usb/add-lcd-panel.cfg \
+		file://licheepi-nano/defconfig-usb/change-console-font.cfg \
+		file://licheepi-nano/add-support-st7789v-pannel.patch \
+        "
+
+do_patch_prepend() {
+	cp -rf ${WORKDIR}/licheepi-nano/append_src/* ${S}
+}

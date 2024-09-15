@@ -8,10 +8,14 @@ IMAGE_INSTALL= "\
         sysvinit \
         initscripts \
         ${CORE_IMAGE_EXTRA_INSTALL} \
+		useradd-example \
+		sl \
+		ffmpeg \
+		dietsplash \
 "
 
 IMAGE_LINGUAS = " "
 
 inherit core-image
 
-IMAGE_ROOTFS_SIZE ?= "8192"
+IMAGE_ROOTFS_SIZE ?= "81920"

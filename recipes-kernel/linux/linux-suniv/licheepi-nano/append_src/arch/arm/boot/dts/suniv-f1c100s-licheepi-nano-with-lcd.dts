@@ -1,0 +1,50 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR X11)
+/*
+ * Copyright 2018 Icenowy Zheng <icenowy@aosc.io>
+ */
+
+#include "suniv-f1c100s-licheepi-nano.dts"
+
+/ {
+	aliases {
+		spi1 = &spi1;
+	};
+};
+
+&spi1 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&spi1_pins>;
+    status = "okay";
+    spi-max-frequency = <32000000>;
+    // bias-pull-up;
+
+//	display@0{
+//		compatible = "adafruit,yx240qv29", "ilitek,ili9341";
+//		reg = <0>;
+//		spi-max-frequency = <32000000>;
+//		reset-gpios = <&pio 4 4 GPIO_ACTIVE_HIGH>;
+//		dc-gpios = <&pio 4 5 GPIO_ACTIVE_HIGH>;
+//		rotation = <270>;
+//	};
+
+    st7789v@0 {
+			status = "okay";
+			compatible = "sitronix,st7789v_240x320";
+			reg = <0>;
+			spi-max-frequency = <32000000>;
+			rotation = <90>;
+			reset-gpios=<&pio 4 3 GPIO_ACTIVE_HIGH>;
+			dc-gpios  =<&pio 4 4 GPIO_ACTIVE_HIGH>;
+        };
+};
+
+&pio {
+    spi1_pins: spi1-pins{
+         pins = "PA2","PA0","PA3","PA1";
+         function = "spi1";
+    };
+};
+
+&usb_otg {
+	dr_mode = "peripheral";
+};

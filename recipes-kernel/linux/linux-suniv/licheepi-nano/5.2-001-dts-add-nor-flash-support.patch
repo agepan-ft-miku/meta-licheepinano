@@ -12,11 +12,11 @@ index dab2914..e84eb6b 100644
  dtb-$(CONFIG_ARCH_TANGO) += \
  	tango4-vantage-1172.dtb
  dtb-$(CONFIG_ARCH_TEGRA_2x_SOC) += \
-diff --git b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts
+diff --git b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-tconlcd.dts b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-tconlcd.dts
 new file mode 100644
 index 0000000..c6f515b
 --- /dev/null
-+++ b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-lcd.dts
++++ b/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano-with-tconlcd.dts
 @@ -0,0 +1,189 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR X11)
 +/*

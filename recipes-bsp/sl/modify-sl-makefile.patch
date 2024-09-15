@@ -1,0 +1,19 @@
+diff --git a/Makefile b/Makefile
+index c3005d2..33b7a2e 100644
+--- a/Makefile
++++ b/Makefile
+@@ -6,13 +6,10 @@
+ #	Last Modified: 2014/03/31
+ #==========================================
+ 
+-CC=gcc
+-CFLAGS=-O -Wall
+-
+ all: sl
+ 
+ sl: sl.c sl.h
+-	$(CC) $(CFLAGS) -o sl sl.c -lncurses
++	$(CC) $(CFLAGS) ${LDFLAGS} -o sl sl.c -lncurses
+ 
+ clean:
+ 	rm -f sl
